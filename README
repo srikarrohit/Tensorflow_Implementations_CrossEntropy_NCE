@@ -1,0 +1,31 @@
+==========================================================================================
+
+         Introduction to Natural Laguage Processing Assignment 1
+ 
+==========================================================================================
+
+1. Generating batch:
+a. Used collections.deque to maintain a fixed window size and for a queue data structure
+b. Initialised the window first
+c. Now, we use the probability as a distance measure, with the closest one having the
+   highest probability and reduces as the distance grows
+d. We convert this probability into frequence measure by generating left and right one
+   after another
+e. We break once we reach the num_skips value
+f. Finally, we return the batch and labels from the function
+
+- CE_Best model Hyperparameters : Overall accuracy: 36%
+a. max_num_steps  = 100001
+b. batch_size = 64
+c. embedding_size = 128
+d. skip_window = 2
+e. num_skips = 2 
+f. num_sampled = 64
+
+- NCE_Best model Hyperparameters : Overall accuracy: 35.7%
+a. max_num_steps  = 100001
+b. batch_size = 32
+c. embedding_size = 128
+d. skip_window = 2
+e. num_skips = 2 
+f. num_sampled = 64
